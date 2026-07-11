@@ -98,7 +98,7 @@ export default function App() {
           setCurrentStatus({
             isOpen: true,
             activeMenu: 'evening',
-            message: 'פתוח כעת! בר יין ואווירת ערב קסומה 🍷✨',
+            message: 'פתוח כעת! בר יין ותפריט ערב פעיל 🍷🍔',
           });
         } else {
           setCurrentStatus({
@@ -212,7 +212,7 @@ export default function App() {
                   <strong className="text-brand-wine">בחלקו הראשון של היום,</strong> אנחנו פטיסירי ובייקרי תוסס. ריח החמאה הלוהט שעולה מתנורי האבן שלנו מדי בוקר יקבל את פניכם לצד קפה ספשלטי מובחר. כל מאפה שמרים, קרואסון, ודניש מיוצר בעבודת יד מוקפדת מחומרי הגלם הטובים בעולם.
                 </p>
                 <p>
-                  <strong className="text-brand-wine">עם רדת החשכה (החל מ-17:00),</strong> האורות מעומעמים, הנרות נדלקים והמוזיקה משתנה. קפה אלה הופך לבר יין אינטימי ואיכותי. אנו מציעים חוויית בר יין רומנטית ואינטימית עם ערבי קונספט מיוחדים, לצד תפריט יינות בוטיק ישראליים מקומיים ועולמיים שנבחרו עבורכם בקפידה.
+                  <strong className="text-brand-wine">עם רדת החשכה (החל מ-17:00),</strong> האורות מעומעמים, הנרות נדלקים והמוזיקה משתנה. קפה אלה הופך לבר יין אינטימי ואיכותי. אנו מגישים תפריט ערב ייחודי מתחלף עם ערבי קונספט, מנות טאפאס מענגות ופלטות גבינות מיושנות, לצד תפריט יינות בוטיק ישראליים מקומיים ועולמיים שנבחרו עבורכם בקפידה.
                 </p>
               </div>
 
@@ -231,7 +231,7 @@ export default function App() {
                     <Wine size={24} />
                   </div>
                   <h4 className="font-display font-bold text-[#2c1d11] text-sm sm:text-base">בר יין רומנטי</h4>
-                  <p className="text-xs text-brand-brown/60 mt-1">תפריט יין ומשקאות עשיר ומוקפד</p>
+                  <p className="text-xs text-brand-brown/60 mt-1">תפריט יין עשיר עם התאמה אישית למנות</p>
                 </div>
 
                 <div className="bg-white p-5 rounded-2xl border border-[#eedfc9] shadow-sm text-center">

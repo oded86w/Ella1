@@ -8,11 +8,12 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Coffee, Wine, Sparkles, MapPin, Phone, Instagram, Clock, Star, Heart, ScrollText } from 'lucide-react';
 import Navbar from './components/Navbar';
 import AmbientBackground from './components/AmbientBackground';
-import GallerySection from './components/GallerySection';
-import LocationHours from './components/LocationHours';
-import InstagramFeed from './components/InstagramFeed';
-import MenuImagesModal from './components/MenuImagesModal';
-import MobileGalleryModal from './components/MobileGalleryModal';
+
+const GallerySection = React.lazy(() => import('./components/GallerySection'));
+const LocationHours = React.lazy(() => import('./components/LocationHours'));
+const InstagramFeed = React.lazy(() => import('./components/InstagramFeed'));
+const MenuImagesModal = React.lazy(() => import('./components/MenuImagesModal'));
+const MobileGalleryModal = React.lazy(() => import('./components/MobileGalleryModal'));
 
 const getAssetUrl = (url: string) => {
   const base = import.meta.env.BASE_URL;
@@ -147,6 +148,7 @@ export default function App() {
             src={getAssetUrl('./pic/ella.jpg')}
             alt="קפה אלה - אווירה רומנטית"
             referrerPolicy="no-referrer"
+            fetchPriority="high"
             className="w-full h-full object-cover brightness-[0.35]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#faf6f0] via-transparent to-black/40" />
@@ -254,6 +256,7 @@ export default function App() {
                     src={carouselImages[carouselIndex]}
                     alt="גלריית קפה אלה"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
@@ -284,14 +287,20 @@ export default function App() {
 
       {/* PHOTO GALLERY LIGHTBOX */}
       <div className="hidden md:block">
-        <GallerySection />
+        <React.Suspense fallback={null}>
+          <GallerySection />
+        </React.Suspense>
       </div>
 
       {/* LOCATION & HOURS SECTION */}
-      <LocationHours />
+      <React.Suspense fallback={null}>
+        <LocationHours />
+      </React.Suspense>
 
       {/* INSTAGRAM LIVE MOCK SECTION */}
-      <InstagramFeed />
+      <React.Suspense fallback={null}>
+        <InstagramFeed />
+      </React.Suspense>
 
       {/* FOOTER */}
       <footer className="bg-brand-dark text-white/90 pt-16 pb-8 border-t border-brand-warm-gold/20 relative z-10 text-right">
@@ -352,8 +361,10 @@ export default function App() {
         </div>
       </footer>
 
-      <MenuImagesModal isOpen={menuImagesModalOpen} onClose={() => setMenuImagesModalOpen(false)} />
-      <MobileGalleryModal isOpen={mobileGalleryOpen} onClose={() => setMobileGalleryOpen(false)} />
+      <React.Suspense fallback={null}>
+        <MenuImagesModal isOpen={menuImagesModalOpen} onClose={() => setMenuImagesModalOpen(false)} />
+        <MobileGalleryModal isOpen={mobileGalleryOpen} onClose={() => setMobileGalleryOpen(false)} />
+      </React.Suspense>
     </div>
   );
 }

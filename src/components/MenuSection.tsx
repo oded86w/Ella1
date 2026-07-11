@@ -186,6 +186,7 @@ export default function MenuSection() {
                       src={item.image}
                       alt={item.name}
                       referrerPolicy="no-referrer"
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     {/* Shadow overlay */}

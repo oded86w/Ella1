@@ -16,13 +16,15 @@ const MenuImagesModal = React.lazy(() => import('./components/MenuImagesModal'))
 const MobileGalleryModal = React.lazy(() => import('./components/MobileGalleryModal'));
 
 const getAssetUrl = (url: string) => {
-  const base = import.meta.env.BASE_URL;
+  let base = import.meta.env.BASE_URL;
+  if (base === './') base = '/';
+  if (!base.endsWith('/')) base += '/';
   if (url.startsWith('./')) return `${base}${url.substring(2)}`;
   if (url.startsWith('/')) return `${base}${url.substring(1)}`;
   return url;
 };
 
-const carouselImages = [
+const CAROUSEL_RAW_IMAGES = [
   './pic/2.jpg',
   './pic/1.jpg',
   './pic/3.jpg',
@@ -34,9 +36,13 @@ const carouselImages = [
   './pic/night/2.jpg',
   './pic/night/3.jpg',
   './pic/night/4.jpg'
-].map(getAssetUrl);
+];
 
 export default function App() {
+  const carouselImages = React.useMemo(() => {
+    return CAROUSEL_RAW_IMAGES.map(getAssetUrl);
+  }, []);
+
   const [ambientActive, setAmbientActive] = useState<boolean>(true);
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [menuImagesModalOpen, setMenuImagesModalOpen] = useState<boolean>(false);
@@ -48,7 +54,7 @@ export default function App() {
       setCarouselIndex((prev) => (prev + 1) % carouselImages.length);
     }, 4500);
     return () => clearInterval(timer);
-  }, []);
+  }, [carouselImages]);
 
   const [currentStatus, setCurrentStatus] = useState<{
     isOpen: boolean;

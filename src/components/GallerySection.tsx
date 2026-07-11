@@ -8,7 +8,9 @@ export default function GallerySection() {
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
 
   const getAssetUrl = (url: string) => {
-    const base = import.meta.env.BASE_URL;
+    let base = import.meta.env.BASE_URL;
+    if (base === './') base = '/';
+    if (!base.endsWith('/')) base += '/';
     if (url.startsWith('./')) return `${base}${url.substring(2)}`;
     if (url.startsWith('/')) return `${base}${url.substring(1)}`;
     return url;

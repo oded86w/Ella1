@@ -8,6 +8,13 @@ interface MenuImagesModalProps {
 }
 
 export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProps) {
+  const getAssetUrl = (url: string) => {
+    const base = import.meta.env.BASE_URL;
+    if (url.startsWith('./')) return `${base}${url.substring(2)}`;
+    if (url.startsWith('/')) return `${base}${url.substring(1)}`;
+    return url;
+  };
+
   const menus = [
     {
       id: 'brunch',
@@ -24,7 +31,7 @@ export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProp
       title: 'תפריט משקאות ויין',
       url: './menu/Drinks.jpg',
     }
-  ];
+  ].map(item => ({ ...item, url: getAssetUrl(item.url) }));
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 

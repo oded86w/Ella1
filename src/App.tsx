@@ -14,6 +14,13 @@ import InstagramFeed from './components/InstagramFeed';
 import MenuImagesModal from './components/MenuImagesModal';
 import MobileGalleryModal from './components/MobileGalleryModal';
 
+const getAssetUrl = (url: string) => {
+  const base = import.meta.env.BASE_URL;
+  if (url.startsWith('./')) return `${base}${url.substring(2)}`;
+  if (url.startsWith('/')) return `${base}${url.substring(1)}`;
+  return url;
+};
+
 const carouselImages = [
   './pic/2.jpg',
   './pic/1.jpg',
@@ -26,7 +33,7 @@ const carouselImages = [
   './pic/night/2.jpg',
   './pic/night/3.jpg',
   './pic/night/4.jpg'
-];
+].map(getAssetUrl);
 
 export default function App() {
   const [ambientActive, setAmbientActive] = useState<boolean>(true);
@@ -137,7 +144,7 @@ export default function App() {
         {/* Full screen layout backdrop */}
         <div className="absolute inset-0 z-0">
           <img
-            src="./pic/ella.jpg"
+            src={getAssetUrl('./pic/ella.jpg')}
             alt="קפה אלה - אווירה רומנטית"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover brightness-[0.35]"

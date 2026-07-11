@@ -25,7 +25,7 @@ export default function MenuSection() {
       );
     } else {
       list.push(
-        { id: 'burgers', label: 'המבורגר שף' },
+        { id: 'specialties', label: 'מנות שף ודגים' },
         { id: 'small-plates', label: 'מנות לחלוקה' },
         { id: 'wine', label: 'יין ובוטיק' }
       );
@@ -113,7 +113,7 @@ export default function MenuSection() {
             <Sparkles size={14} className="text-brand-warm-gold" />
             {activeTab === 'morning' 
               ? '🥐 תפריט הבוקר והצהריים כולל קרואסונים פריכים ומאפים שנאפים במקום, וארוחות בראנץ׳ עשירות.' 
-              : '🍷 תפריט הערב כולל המבורגרים מנתחי בקר מובחרים, מנות טאפאס מעולות ומבחר יינות המותאמים אישית.'
+              : '🍷 תפריט הערב כולל מנות דגים וטאפאס מעולות, פסטות מיוחדות ומבחר יינות משובחים המותאמים אישית.'
             }
           </p>
         </div>

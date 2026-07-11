@@ -12,6 +12,13 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
 
+  const getAssetUrl = (url: string) => {
+    const base = import.meta.env.BASE_URL;
+    if (url.startsWith('./')) return `${base}${url.substring(2)}`;
+    if (url.startsWith('/')) return `${base}${url.substring(1)}`;
+    return url;
+  };
+
   const filters = [
     { id: 'all', label: 'הכל' },
     { id: 'pastries', label: 'מאפים ומתוקים' },
@@ -113,9 +120,10 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
                   className="aspect-square rounded-2xl overflow-hidden relative border border-white/5 bg-white/5 active:scale-98 transition-transform cursor-pointer group"
                 >
                   <img
-                    src={item.url}
+                    src={getAssetUrl(item.url)}
                     alt="קפה אלה"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-end p-2.5">
@@ -168,7 +176,7 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
 
                   <div className="flex-1 h-[60vh] flex items-center justify-center p-2">
                     <img
-                      src={filteredItems[activeImageIndex].url}
+                      src={getAssetUrl(filteredItems[activeImageIndex].url)}
                       alt="קפה אלה מוגדל"
                       referrerPolicy="no-referrer"
                       className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"

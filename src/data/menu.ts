@@ -87,21 +87,21 @@ export const MORNING_MENU: MenuItem[] = [
 export const EVENING_MENU: MenuItem[] = [
   {
     id: 'e1',
-    name: 'המבורגר אלה סיגנצ׳ר',
-    description: '200 גרם קציצת בקר מובחרת ומיושנת במקום, מוגשת בלחמניית בריוש רכה שנאפית אצלנו, איולי כמורה וכמהין, רוקט טרי, וריבת בצל מקורמלת ביין קברנה סוביניון. מוגש עם צ׳יפס דק ופריך.',
-    price: 72,
-    category: 'burgers',
-    tags: ['בשרי', 'מנת דגל'],
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600'
+    name: 'פילה סלמון בגריל',
+    description: 'פילה סלמון נורווגי טרי צרוב בגריל, מוגש על מצע פירה תפוחי אדמה קטיפתי, ירקות ירוקים מוקפצים בחמאה ויין לבן, ורוטב שמנת לימוני.',
+    price: 86,
+    category: 'specialties',
+    tags: ['דגים', 'מנת דגל', 'ללא גלוטן'],
+    image: 'https://images.unsplash.com/photo-1485921325814-a50431496cc9?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'e2',
-    name: 'בורגר סנט מור כמהין',
-    description: 'בורגר שף מבקר משובח, מעליו פרוסת גבינת סנט מור מקורמלת בברנר, איולי שום שחור, עליי בייבי ותרד. חווית טעמים עשירה ומנחמת.',
-    price: 79,
-    category: 'burgers',
-    tags: ['בשרי'],
-    image: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&q=80&w=600'
+    name: 'רביולי בטטה וערמונים',
+    description: 'כיסוני רביולי במילוי קרמי של בטטה צלויה, ברוטב שמנת, כמהין, חמאה חומה, ערמונים קלויים ופרמזן רג׳יאנו מיושנת.',
+    price: 68,
+    category: 'specialties',
+    tags: ['חלבי', 'צמחוני'],
+    image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'e3',
@@ -259,9 +259,9 @@ export const INSTAGRAM_POSTS: InstagramPost[] = [
   {
     id: 'ig3',
     url: 'https://www.instagram.com/ella_patisserie_wine/',
-    imageUrl: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=500',
+    imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&q=80&w=500',
     likes: 549,
     comments: 42,
-    caption: 'Burger Night is ON! 🍔 המבורגר אלה סיגנצ׳ר עם איולי כמהין וסנט מור נמס מעל. ההתמכרות הבאה שלכם כבר כאן #ellaburgers'
+    caption: 'Wine Night is ON! 🍷 פלטת גבינות בוטיק משובחות, פוקאצ׳ה לוהטת מהטאבון וכוס יין צונן בערב רומנטי בקפה אלה. מחכים לכם #ellawinebar'
   }
 ];

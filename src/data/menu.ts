@@ -172,68 +172,68 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   // מאפים ומתוקים (from /pic/)
   {
     id: 'g1',
-    url: './pic/1.jpg',
+    url: './pic/1.webp',
     caption: '',
     category: 'pastries'
   },
   {
     id: 'g2',
-    url: './pic/2.jpg',
+    url: './pic/2.webp',
     caption: '',
     category: 'pastries'
   },
   {
     id: 'g3',
-    url: './pic/3.jpg',
+    url: './pic/3.webp',
     caption: '',
     category: 'pastries'
   },
   {
     id: 'g4',
-    url: './pic/4.jpg',
+    url: './pic/4.webp',
     caption: '',
     category: 'pastries'
   },
   {
     id: 'g5',
-    url: './pic/5.jpg',
+    url: './pic/5.webp',
     caption: '',
     category: 'pastries'
   },
   {
     id: 'g6',
-    url: './pic/6.jpg',
+    url: './pic/6.webp',
     caption: '',
     category: 'pastries'
   },
   {
     id: 'g7',
-    url: './pic/7.jpg',
+    url: './pic/7.webp',
     caption: '',
     category: 'pastries'
   },
   // בר יין וערב (from /pic/night/)
   {
     id: 'g_night1',
-    url: './pic/night/1.jpg',
+    url: './pic/night/1.webp',
     caption: '',
     category: 'wine'
   },
   {
     id: 'g_night2',
-    url: './pic/night/2.jpg',
+    url: './pic/night/2.webp',
     caption: '',
     category: 'wine'
   },
   {
     id: 'g_night3',
-    url: './pic/night/3.jpg',
+    url: './pic/night/3.webp',
     caption: '',
     category: 'wine'
   },
   {
     id: 'g_night4',
-    url: './pic/night/4.jpg',
+    url: './pic/night/4.webp',
     caption: '',
     category: 'wine'
   }

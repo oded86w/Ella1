@@ -14,11 +14,14 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
 
   const getAssetUrl = (url: string) => {
     let base = import.meta.env.BASE_URL;
-    if (base === './') base = '/';
     if (!base.endsWith('/')) base += '/';
-    if (url.startsWith('./')) return `${base}${url.substring(2)}`;
-    if (url.startsWith('/')) return `${base}${url.substring(1)}`;
-    return url;
+    
+    const cleanUrl = url.startsWith('./') ? url.substring(2) : url.startsWith('/') ? url.substring(1) : url;
+    
+    if (base === './') {
+      return './' + cleanUrl;
+    }
+    return base + cleanUrl;
   };
 
   const filters = [

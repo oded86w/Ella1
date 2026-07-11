@@ -17,25 +17,28 @@ const MobileGalleryModal = React.lazy(() => import('./components/MobileGalleryMo
 
 const getAssetUrl = (url: string) => {
   let base = import.meta.env.BASE_URL;
-  if (base === './') base = '/';
   if (!base.endsWith('/')) base += '/';
-  if (url.startsWith('./')) return `${base}${url.substring(2)}`;
-  if (url.startsWith('/')) return `${base}${url.substring(1)}`;
-  return url;
+  
+  const cleanUrl = url.startsWith('./') ? url.substring(2) : url.startsWith('/') ? url.substring(1) : url;
+  
+  if (base === './') {
+    return './' + cleanUrl;
+  }
+  return base + cleanUrl;
 };
 
 const CAROUSEL_RAW_IMAGES = [
-  './pic/2.jpg',
-  './pic/1.jpg',
-  './pic/3.jpg',
-  './pic/4.jpg',
-  './pic/5.jpg',
-  './pic/6.jpg',
-  './pic/7.jpg',
-  './pic/night/1.jpg',
-  './pic/night/2.jpg',
-  './pic/night/3.jpg',
-  './pic/night/4.jpg'
+  './pic/2.webp',
+  './pic/1.webp',
+  './pic/3.webp',
+  './pic/4.webp',
+  './pic/5.webp',
+  './pic/6.webp',
+  './pic/7.webp',
+  './pic/night/1.webp',
+  './pic/night/2.webp',
+  './pic/night/3.webp',
+  './pic/night/4.webp'
 ];
 
 export default function App() {
@@ -151,7 +154,7 @@ export default function App() {
         {/* Full screen layout backdrop */}
         <div className="absolute inset-0 z-0">
           <img
-            src={getAssetUrl('./pic/ella.jpg')}
+            src={getAssetUrl('./pic/ella.webp')}
             alt="קפה אלה - אווירה רומנטית"
             referrerPolicy="no-referrer"
             fetchPriority="high"

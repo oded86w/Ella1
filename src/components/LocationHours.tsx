@@ -43,7 +43,7 @@ export default function LocationHours() {
                     <span className="font-bold text-brand-brown font-display text-sm sm:text-base">ימי ראשון עד חמישי</span>
                     <span className="font-mono text-sm font-bold text-brand-wine">8:00 - 23:00</span>
                   </div>
-                  <p className="text-xs text-brand-brown/60 mt-0.5">תפריט ערב מיוחד מוגש החל מהשעה 17:00</p>
+                  <p className="text-xs text-brand-brown/60 mt-0.5">חוויית בר יין רומנטית ואינטימית החל מהשעה 17:00</p>
                 </div>
               </div>
 

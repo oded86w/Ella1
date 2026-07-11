@@ -273,13 +273,13 @@ export default function MenuSection() {
             <div className="lg:col-span-2 text-right">
               <span className="bg-brand-warm-gold/20 text-brand-warm-gold px-3 py-1 rounded-full text-xs font-bold border border-brand-warm-gold/30 inline-flex items-center gap-1.5 mb-4">
                 <Flame size={12} className="animate-pulse" />
-                ערבי קונספט יין והמבורגר שף
+                ערבי קונספט יין ומנות שף
               </span>
               <h3 className="font-display text-2xl sm:text-3xl font-bold mb-4">
-                המבורגר שף ויין ללא תחתית בערבי חמישי 🍷🍔
+                יין ללא תחתית ומנות שף מפתיעות בערבי חמישי 🍷🧀
               </h3>
               <p className="text-white/80 text-sm sm:text-base leading-relaxed">
-                מדי יום חמישי החל מהשעה 18:00, קפה אלה הופך לחגיגה קולינרית יוצאת דופן: מבחר המבורגרים מיוחדים של השף, המשלבים גבינות מיושנות, כמהין וריבות שף ייחודיות, לצד תפריט יינות בוטיק ישראלים ועולמיים פתוחים ללא הגבלה במחיר מיוחד.
+                מדי יום חמישי החל מהשעה 18:00, קפה אלה הופך לחגיגה קולינרית יוצאת דופן: מבחר מנות דגים ופסטות מיוחדות של השף, המשלבות גבינות בוטיק מיושנות, כמהין וירקות שוק טריים, לצד תפריט יינות בוטיק ישראלים ועולמיים פתוחים ללא הגבלה במחיר מיוחד.
               </p>
             </div>
             <div className="flex justify-start lg:justify-end">

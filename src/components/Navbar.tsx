@@ -95,10 +95,10 @@ export default function Navbar({
             }`}>
               <span>קפה אלה</span>
             </h1>
-            <span className={`font-serif text-[10px] sm:text-xs tracking-[0.2em] font-semibold -mt-1 uppercase transition-colors ${
+            <span className={`font-serif text-[10px] sm:text-xs tracking-[0.1em] font-semibold -mt-1 uppercase transition-colors ${
               isScrolled ? 'text-brand-warm-gold' : 'text-[#f5ebd9] drop-shadow-sm'
             }`}>
-              Patisserie • Wine
+              אלה פטיסרי ויין
             </span>
           </div>
 
@@ -171,7 +171,7 @@ export default function Navbar({
                   <div className="text-right">
                     <h2 className="font-display text-xl font-bold text-brand-brown">קפה אלה</h2>
                     <span className="font-serif text-[10px] tracking-widest text-brand-warm-gold font-bold">
-                      Patisserie & Wine
+                      אלה פטיסרי ויין
                     </span>
                   </div>
                   <button

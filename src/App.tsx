@@ -104,7 +104,7 @@ export default function App() {
           setCurrentStatus({
             isOpen: true,
             activeMenu: 'morning',
-            message: 'פתוח כעת! פטיסירי, קפה ובראנץ׳ של בוקר 🥐☕️',
+            message: 'פתוח כעת! פטיסרי, קפה ובראנץ׳ של בוקר 🥐☕️',
           });
         }
       } else {
@@ -175,11 +175,11 @@ export default function App() {
             {/* Elegant Subheadings */}
             <div className="flex flex-col items-center">
               <p className="font-serif text-lg sm:text-2xl lg:text-3xl text-brand-warm-gold tracking-widest font-semibold uppercase">
-                Patisserie • Bakery • Wine Bar
+                אלה פטיסרי ויין
               </p>
               <div className="w-16 h-0.5 bg-brand-warm-gold my-4 rounded-full" />
               <p className="text-white/90 text-sm sm:text-lg max-w-xl leading-relaxed font-sans font-light">
-                בבוקר פטיסירי צרפתי בעבודת יד עם מאפים חמים וחמאת משכר, ובערב בר יין אינטימי עם תפריט שף וערבי קונספט.
+                בבוקר פטיסרי צרפתי עם מאפים בעבודת יד, ובערב בר יין אינטימי עם תפריט שף המבטיח ערב יין חוויתי.
               </p>
             </div>
 
@@ -197,22 +197,22 @@ export default function App() {
             {/* Story Text */}
             <div className="lg:col-span-7 space-y-6 text-right">
               <span className="font-serif text-sm tracking-widest text-brand-warm-gold font-bold uppercase block mb-2">
-                הסיפור של קפה אלה • Ella Patisserie & Wine
+                הסיפור של קפה אלה • אלה פטיסרי ויין
               </span>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-brown">
-                מבוקר פריזאי חמים לבר יין רומנטי
+                מבוקר של מאפים בעבודת יד לבר יין רומנטי
               </h2>
               <div className="w-16 h-1 bg-brand-wine rounded-full" />
               
               <div className="space-y-4 text-brand-brown/80 text-sm sm:text-base leading-relaxed">
                 <p>
-                  קפה אלה נולד מתוך תשוקה אמיתית לאפייה מסורתית צרפתית ותרבות אירוח חמה. המקום שלנו בבאר יעקב עוצב בקפידה רבה כדי להעניק לכם מפלט של שלווה, איכות ואסתטיקה מרהיבה בכל שעה ביום.
+                  קפה אלה נולד מתוך תשוקה אמיתית לאפייה מסורתית צרפתית ותרבות אירוח חמה. המקום שלנו עוצב בקפידה רבה כדי להעניק לכם מפלט של שלווה, איכות ואסתטיקה מרהיבה בכל שעה ביום.
                 </p>
                 <p>
-                  <strong className="text-brand-wine">בחלקו הראשון של היום,</strong> אנחנו פטיסירי ובייקרי תוסס. ריח החמאה הלוהט שעולה מתנורי האבן שלנו מדי בוקר יקבל את פניכם לצד קפה ספשלטי מובחר. כל מאפה שמרים, קרואסון, ודניש מיוצר בעבודת יד מוקפדת מחומרי הגלם הטובים בעולם.
+                  <strong className="text-brand-wine">בחלקו הראשון של היום,</strong> אנחנו פטיסרי תוסס. ריח החמאה הלוהט שעולה מתנורי האבן שלנו מדי בוקר יקבל את פניכם לצד קפה ספשלטי מובחר. כל מאפה שמרים, קרואסון, ודניש הם מאפים בעבודת יד, מיוצרים בקפידה מחומרי הגלם הטובים בעולם.
                 </p>
                 <p>
-                  <strong className="text-brand-wine">עם רדת החשכה (החל מ-17:00),</strong> האורות מעומעמים, הנרות נדלקים והמוזיקה משתנה. קפה אלה הופך לבר יין אינטימי ואיכותי. אנו מגישים תפריט ערב ייחודי מתחלף עם ערבי קונספט, מנות טאפאס מענגות ופלטות גבינות מיושנות, לצד תפריט יינות בוטיק ישראליים מקומיים ועולמיים שנבחרו עבורכם בקפידה.
+                  <strong className="text-brand-wine">עם רדת החשכה (החל מ-17:00),</strong> האורות מעומעמים, והאווירה משתנה. קפה אלה הופך להיות בר יין אינטימי ואיכותי. אנו מציעים לכם ערב יין עשיר עם תפריט מתחלף, מנות טאפאס מענגות ופלטות גבינות מיושנות, לצד יינות בוטיק שנבחרו עבורכם בקפידה.
                 </p>
               </div>
 
@@ -302,10 +302,10 @@ export default function App() {
             <div className="space-y-4 md:col-span-2">
               <h3 className="font-display text-2xl font-bold tracking-widest text-white">קפה אלה</h3>
               <p className="font-serif text-brand-warm-gold text-xs uppercase tracking-widest font-semibold">
-                Ella Patisserie • Bakery • Wine
+                אלה פטיסרי ויין
               </p>
               <p className="text-white/60 text-sm max-w-sm leading-relaxed">
-                מקום מפגש ייחודי בבאר יעקב המשלב פטיסירי בוטיק צרפתי בבוקר ובר יין רומנטי אינטמי בערב. מחויבים לחומרי הגלם הטובים ביותר ולאירוח מכל הלב.
+                מקום מפגש ייחודי המשלב פטיסרי איכותי המציע מאפים בעבודת יד בבוקר, והופך להיות בר יין המעניק חווית ערב יין מרגשת.
               </p>
               <div className="flex gap-3 justify-end pt-2">
                 <a
@@ -345,7 +345,7 @@ export default function App() {
           {/* Bottom copyright notice */}
           <div className="flex flex-col sm:flex-row items-center justify-between text-xs text-white/40 gap-4">
             <p>
-              © {new Date().getFullYear()} קפה אלה - פטיסירי, בייקרי ובר יין. כל הזכויות שמורות.
+              © {new Date().getFullYear()} אלה פטיסרי ויין - קפה אלה. כל הזכויות שמורות.
             </p>
           </div>
 

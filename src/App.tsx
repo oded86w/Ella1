@@ -137,7 +137,7 @@ export default function App() {
         {/* Full screen layout backdrop */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/pic/ella.jpg"
+            src="./pic/ella.jpg"
             alt="קפה אלה - אווירה רומנטית"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover brightness-[0.35]"

@@ -28,17 +28,17 @@ const getAssetUrl = (url: string) => {
 };
 
 const CAROUSEL_RAW_IMAGES = [
-  './pic/2.webp',
-  './pic/1.webp',
-  './pic/3.webp',
-  './pic/4.webp',
-  './pic/5.webp',
-  './pic/6.webp',
-  './pic/7.webp',
-  './pic/night/1.webp',
-  './pic/night/2.webp',
-  './pic/night/3.webp',
-  './pic/night/4.webp'
+  './pic/2.jpg',
+  './pic/1.jpg',
+  './pic/3.jpg',
+  './pic/4.jpg',
+  './pic/5.jpg',
+  './pic/6.jpg',
+  './pic/7.jpg',
+  './pic/night/1.jpg',
+  './pic/night/2.jpg',
+  './pic/night/3.jpg',
+  './pic/night/4.jpg'
 ];
 
 export default function App() {
@@ -154,7 +154,7 @@ export default function App() {
         {/* Full screen layout backdrop */}
         <div className="absolute inset-0 z-0">
           <img
-            src={getAssetUrl('./pic/ella.webp')}
+            src={getAssetUrl('./pic/ella.jpg')}
             alt="קפה אלה - אווירה רומנטית"
             referrerPolicy="no-referrer"
             fetchPriority="high"

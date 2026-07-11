@@ -24,17 +24,17 @@ export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProp
     {
       id: 'brunch',
       title: 'תפריט בראנץ׳ ובוקר',
-      url: './menu/Brunch .webp', // Note: trailing space in filename as uploaded
+      url: './menu/Brunch .jpg', // Note: trailing space in filename as uploaded
     },
     {
       id: 'friday',
       title: 'תפריט שישי',
-      url: './menu/Friday.webp',
+      url: './menu/Friday.jpg',
     },
     {
       id: 'drinks',
       title: 'תפריט משקאות ויין',
-      url: './menu/Drinks.webp',
+      url: './menu/Drinks.jpg',
     }
   ].map(item => ({ ...item, url: getAssetUrl(item.url) }));
 

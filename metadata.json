@@ -1,0 +1,6 @@
+{
+  "name": "קפה אלה - Ella Patisserie & Wine",
+  "description": "אתר תדמית חם ויוקרתי לקפה אלה בבאר יעקב - פטיסירי, בייקרי, בראנץ' ויין. הזמנת מקומות, תפריט בוקר, ערב וגלריית תמונות.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

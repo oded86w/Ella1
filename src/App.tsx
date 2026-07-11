@@ -8,15 +8,20 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Coffee, Wine, Sparkles, MapPin, Phone, Instagram, Clock, Star, Heart, ScrollText } from 'lucide-react';
 import Navbar from './components/Navbar';
 import AmbientBackground from './components/AmbientBackground';
-import { getAssetUrl } from './utils/assets';
-
 import GallerySection from './components/GallerySection';
 import LocationHours from './components/LocationHours';
 import InstagramFeed from './components/InstagramFeed';
 import MenuImagesModal from './components/MenuImagesModal';
 import MobileGalleryModal from './components/MobileGalleryModal';
 
-const CAROUSEL_RAW_IMAGES = [
+const getAssetUrl = (url: string) => {
+  const base = import.meta.env.BASE_URL;
+  if (url.startsWith('./')) return `${base}${url.substring(2)}`;
+  if (url.startsWith('/')) return `${base}${url.substring(1)}`;
+  return url;
+};
+
+const carouselImages = [
   './pic/2.jpg',
   './pic/1.jpg',
   './pic/3.jpg',
@@ -28,13 +33,9 @@ const CAROUSEL_RAW_IMAGES = [
   './pic/night/2.jpg',
   './pic/night/3.jpg',
   './pic/night/4.jpg'
-];
+].map(getAssetUrl);
 
 export default function App() {
-  const carouselImages = React.useMemo(() => {
-    return CAROUSEL_RAW_IMAGES.map(getAssetUrl);
-  }, []);
-
   const [ambientActive, setAmbientActive] = useState<boolean>(true);
   const [activeSection, setActiveSection] = useState<string>('hero');
   const [menuImagesModalOpen, setMenuImagesModalOpen] = useState<boolean>(false);
@@ -46,7 +47,7 @@ export default function App() {
       setCarouselIndex((prev) => (prev + 1) % carouselImages.length);
     }, 4500);
     return () => clearInterval(timer);
-  }, [carouselImages]);
+  }, []);
 
   const [currentStatus, setCurrentStatus] = useState<{
     isOpen: boolean;
@@ -145,7 +146,7 @@ export default function App() {
           <img
             src={getAssetUrl('./pic/ella.jpg')}
             alt="קפה אלה - אווירה רומנטית"
-            fetchPriority="high"
+            referrerPolicy="no-referrer"
             className="w-full h-full object-cover brightness-[0.35]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#faf6f0] via-transparent to-black/40" />
@@ -252,7 +253,7 @@ export default function App() {
                     key={carouselIndex}
                     src={carouselImages[carouselIndex]}
                     alt="גלריית קפה אלה"
-                    loading="lazy"
+                    referrerPolicy="no-referrer"
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}

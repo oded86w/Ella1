@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronRight, ChevronLeft, Camera, Eye } from 'lucide-react';
 import { GALLERY_ITEMS } from '../data/menu';
-import { getAssetUrl } from '../utils/assets';
 
 interface MobileGalleryModalProps {
   isOpen: boolean;
@@ -12,6 +11,13 @@ interface MobileGalleryModalProps {
 export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryModalProps) {
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
+
+  const getAssetUrl = (url: string) => {
+    const base = import.meta.env.BASE_URL;
+    if (url.startsWith('./')) return `${base}${url.substring(2)}`;
+    if (url.startsWith('/')) return `${base}${url.substring(1)}`;
+    return url;
+  };
 
   const filters = [
     { id: 'all', label: 'הכל' },
@@ -116,6 +122,7 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
                   <img
                     src={getAssetUrl(item.url)}
                     alt="קפה אלה"
+                    referrerPolicy="no-referrer"
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -171,7 +178,7 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
                     <img
                       src={getAssetUrl(filteredItems[activeImageIndex].url)}
                       alt="קפה אלה מוגדל"
-                      loading="lazy"
+                      referrerPolicy="no-referrer"
                       className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
                     />
                   </div>

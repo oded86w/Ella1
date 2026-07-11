@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronRight, ChevronLeft, Maximize2 } from 'lucide-react';
-import { getAssetUrl } from '../utils/assets';
 
 interface MenuImagesModalProps {
   isOpen: boolean;
@@ -9,6 +8,13 @@ interface MenuImagesModalProps {
 }
 
 export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProps) {
+  const getAssetUrl = (url: string) => {
+    const base = import.meta.env.BASE_URL;
+    if (url.startsWith('./')) return `${base}${url.substring(2)}`;
+    if (url.startsWith('/')) return `${base}${url.substring(1)}`;
+    return url;
+  };
+
   const menus = [
     {
       id: 'brunch',
@@ -98,7 +104,7 @@ export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProp
                   <img
                     src={activeMenu.url}
                     alt={activeMenu.title}
-                    loading="lazy"
+                    referrerPolicy="no-referrer"
                     className="max-w-full max-h-[70vh] md:max-h-[76vh] object-contain rounded-lg shadow-2xl border border-white/5 cursor-zoom-in"
                     onClick={() => window.open(activeMenu.url, '_blank')}
                   />

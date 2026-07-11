@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { GALLERY_ITEMS } from '../data/menu';
 import { Maximize2, X, ChevronLeft, ChevronRight, Eye, Camera } from 'lucide-react';
-import { getAssetUrl } from '../utils/assets';
 
 export default function GallerySection() {
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
+
+  const getAssetUrl = (url: string) => {
+    const base = import.meta.env.BASE_URL;
+    if (url.startsWith('./')) return `${base}${url.substring(2)}`;
+    if (url.startsWith('/')) return `${base}${url.substring(1)}`;
+    return url;
+  };
 
   const filters = [
     { id: 'all', label: 'הכל' },
@@ -94,6 +100,7 @@ export default function GallerySection() {
                 <img
                   src={getAssetUrl(item.url)}
                   alt="גלריית קפה אלה"
+                  referrerPolicy="no-referrer"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -170,6 +177,7 @@ export default function GallerySection() {
                 <img
                   src={getAssetUrl(filteredItems[activeImageIndex].url)}
                   alt="גלריית קפה אלה"
+                  referrerPolicy="no-referrer"
                   className="max-w-full max-h-[80vh] object-contain rounded-2xl border border-white/10 shadow-2xl"
                 />
               </motion.div>

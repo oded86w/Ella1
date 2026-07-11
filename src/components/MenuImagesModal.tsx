@@ -137,7 +137,7 @@ export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProp
             </div>
 
             <div className="text-center sm:text-right">
-              <span>ניתן לפתוח את התמונה במסך מלא לצפייה מוגדלת • כשר למהדרין בהשגחת הרבנות</span>
+              <span>ניתן לפתוח את התמונה במסך מלא לצפייה מוגדלת • כשר בהשגחת הרבנות</span>
             </div>
           </div>
         </motion.div>

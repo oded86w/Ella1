@@ -69,7 +69,7 @@ export default function LocationHours() {
                     <span className="font-bold text-brand-brown font-display text-sm sm:text-base">יום שבת</span>
                     <span className="font-mono text-xs sm:text-sm font-bold text-red-700 bg-red-50 px-2 py-0.5 rounded border border-red-100">סגור • כשר</span>
                   </div>
-                  <p className="text-xs text-brand-brown/60 mt-0.5">קפה אלה בעל תעודת כשרות מקומית למהדרין</p>
+                  <p className="text-xs text-brand-brown/60 mt-0.5">קפה אלה בעל תעודת כשרות מקומית</p>
                 </div>
               </div>
             </div>

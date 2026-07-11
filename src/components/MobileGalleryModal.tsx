@@ -204,7 +204,7 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
             className="w-full max-w-lg mx-auto py-2 text-center text-white/40 text-[10px] font-sans border-t border-white/10"
             onClick={(e) => e.stopPropagation()}
           >
-            © קפה אלה באר יעקב • כשר למהדרין
+            © קפה אלה באר יעקב • כשר
           </div>
         </motion.div>
       )}

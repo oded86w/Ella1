@@ -238,7 +238,7 @@ export default function App() {
                   <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-green-700 mx-auto mb-3">
                     <Star size={24} />
                   </div>
-                  <h4 className="font-display font-bold text-[#2c1d11] text-sm sm:text-base">כשרות למהדרין</h4>
+                  <h4 className="font-display font-bold text-[#2c1d11] text-sm sm:text-base">כשר בהשגחה</h4>
                   <p className="text-xs text-brand-brown/60 mt-1">כשר בהשגחת הרבנות באר יעקב</p>
                 </div>
               </div>

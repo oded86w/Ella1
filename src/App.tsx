@@ -10,11 +10,11 @@ import Navbar from './components/Navbar';
 import AmbientBackground from './components/AmbientBackground';
 import { getAssetUrl } from './utils/assets';
 
-const GallerySection = React.lazy(() => import('./components/GallerySection'));
-const LocationHours = React.lazy(() => import('./components/LocationHours'));
-const InstagramFeed = React.lazy(() => import('./components/InstagramFeed'));
-const MenuImagesModal = React.lazy(() => import('./components/MenuImagesModal'));
-const MobileGalleryModal = React.lazy(() => import('./components/MobileGalleryModal'));
+import GallerySection from './components/GallerySection';
+import LocationHours from './components/LocationHours';
+import InstagramFeed from './components/InstagramFeed';
+import MenuImagesModal from './components/MenuImagesModal';
+import MobileGalleryModal from './components/MobileGalleryModal';
 
 const CAROUSEL_RAW_IMAGES = [
   './pic/2.jpg',
@@ -145,7 +145,6 @@ export default function App() {
           <img
             src={getAssetUrl('./pic/ella.jpg')}
             alt="קפה אלה - אווירה רומנטית"
-            referrerPolicy="no-referrer"
             fetchPriority="high"
             className="w-full h-full object-cover brightness-[0.35]"
           />
@@ -253,7 +252,6 @@ export default function App() {
                     key={carouselIndex}
                     src={carouselImages[carouselIndex]}
                     alt="גלריית קפה אלה"
-                    referrerPolicy="no-referrer"
                     loading="lazy"
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -285,20 +283,14 @@ export default function App() {
 
       {/* PHOTO GALLERY LIGHTBOX */}
       <div className="hidden md:block">
-        <React.Suspense fallback={null}>
-          <GallerySection />
-        </React.Suspense>
+        <GallerySection />
       </div>
 
       {/* LOCATION & HOURS SECTION */}
-      <React.Suspense fallback={null}>
-        <LocationHours />
-      </React.Suspense>
+      <LocationHours />
 
       {/* INSTAGRAM LIVE MOCK SECTION */}
-      <React.Suspense fallback={null}>
-        <InstagramFeed />
-      </React.Suspense>
+      <InstagramFeed />
 
       {/* FOOTER */}
       <footer className="bg-brand-dark text-white/90 pt-16 pb-8 border-t border-brand-warm-gold/20 relative z-10 text-right">
@@ -359,10 +351,8 @@ export default function App() {
         </div>
       </footer>
 
-      <React.Suspense fallback={null}>
-        <MenuImagesModal isOpen={menuImagesModalOpen} onClose={() => setMenuImagesModalOpen(false)} />
-        <MobileGalleryModal isOpen={mobileGalleryOpen} onClose={() => setMobileGalleryOpen(false)} />
-      </React.Suspense>
+      <MenuImagesModal isOpen={menuImagesModalOpen} onClose={() => setMenuImagesModalOpen(false)} />
+      <MobileGalleryModal isOpen={mobileGalleryOpen} onClose={() => setMobileGalleryOpen(false)} />
     </div>
   );
 }

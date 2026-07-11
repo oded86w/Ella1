@@ -98,7 +98,6 @@ export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProp
                   <img
                     src={activeMenu.url}
                     alt={activeMenu.title}
-                    referrerPolicy="no-referrer"
                     loading="lazy"
                     className="max-w-full max-h-[70vh] md:max-h-[76vh] object-contain rounded-lg shadow-2xl border border-white/5 cursor-zoom-in"
                     onClick={() => window.open(activeMenu.url, '_blank')}

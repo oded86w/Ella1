@@ -94,7 +94,6 @@ export default function GallerySection() {
                 <img
                   src={getAssetUrl(item.url)}
                   alt="גלריית קפה אלה"
-                  referrerPolicy="no-referrer"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -171,7 +170,6 @@ export default function GallerySection() {
                 <img
                   src={getAssetUrl(filteredItems[activeImageIndex].url)}
                   alt="גלריית קפה אלה"
-                  referrerPolicy="no-referrer"
                   className="max-w-full max-h-[80vh] object-contain rounded-2xl border border-white/10 shadow-2xl"
                 />
               </motion.div>

@@ -116,7 +116,6 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
                   <img
                     src={getAssetUrl(item.url)}
                     alt="קפה אלה"
-                    referrerPolicy="no-referrer"
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -172,7 +171,6 @@ export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryMod
                     <img
                       src={getAssetUrl(filteredItems[activeImageIndex].url)}
                       alt="קפה אלה מוגדל"
-                      referrerPolicy="no-referrer"
                       loading="lazy"
                       className="max-w-full max-h-full object-contain rounded-xl shadow-2xl"
                     />

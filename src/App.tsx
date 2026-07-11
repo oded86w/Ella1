@@ -8,24 +8,13 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Coffee, Wine, Sparkles, MapPin, Phone, Instagram, Clock, Star, Heart, ScrollText } from 'lucide-react';
 import Navbar from './components/Navbar';
 import AmbientBackground from './components/AmbientBackground';
+import { getAssetUrl } from './utils/assets';
 
 const GallerySection = React.lazy(() => import('./components/GallerySection'));
 const LocationHours = React.lazy(() => import('./components/LocationHours'));
 const InstagramFeed = React.lazy(() => import('./components/InstagramFeed'));
 const MenuImagesModal = React.lazy(() => import('./components/MenuImagesModal'));
 const MobileGalleryModal = React.lazy(() => import('./components/MobileGalleryModal'));
-
-const getAssetUrl = (url: string) => {
-  let base = import.meta.env.BASE_URL;
-  if (!base.endsWith('/')) base += '/';
-  
-  const cleanUrl = url.startsWith('./') ? url.substring(2) : url.startsWith('/') ? url.substring(1) : url;
-  
-  if (base === './') {
-    return './' + cleanUrl;
-  }
-  return base + cleanUrl;
-};
 
 const CAROUSEL_RAW_IMAGES = [
   './pic/2.jpg',

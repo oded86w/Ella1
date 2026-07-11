@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronRight, ChevronLeft, Maximize2 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 interface MenuImagesModalProps {
   isOpen: boolean;
@@ -8,18 +9,6 @@ interface MenuImagesModalProps {
 }
 
 export default function MenuImagesModal({ isOpen, onClose }: MenuImagesModalProps) {
-  const getAssetUrl = (url: string) => {
-    let base = import.meta.env.BASE_URL;
-    if (!base.endsWith('/')) base += '/';
-    
-    const cleanUrl = url.startsWith('./') ? url.substring(2) : url.startsWith('/') ? url.substring(1) : url;
-    
-    if (base === './') {
-      return './' + cleanUrl;
-    }
-    return base + cleanUrl;
-  };
-
   const menus = [
     {
       id: 'brunch',

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ChevronRight, ChevronLeft, Camera, Eye } from 'lucide-react';
 import { GALLERY_ITEMS } from '../data/menu';
+import { getAssetUrl } from '../utils/assets';
 
 interface MobileGalleryModalProps {
   isOpen: boolean;
@@ -11,18 +12,6 @@ interface MobileGalleryModalProps {
 export default function MobileGalleryModal({ isOpen, onClose }: MobileGalleryModalProps) {
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
   const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
-
-  const getAssetUrl = (url: string) => {
-    let base = import.meta.env.BASE_URL;
-    if (!base.endsWith('/')) base += '/';
-    
-    const cleanUrl = url.startsWith('./') ? url.substring(2) : url.startsWith('/') ? url.substring(1) : url;
-    
-    if (base === './') {
-      return './' + cleanUrl;
-    }
-    return base + cleanUrl;
-  };
 
   const filters = [
     { id: 'all', label: 'הכל' },
